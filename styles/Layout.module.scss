@@ -10,4 +10,12 @@
   @media screen and (max-width: 800px) {
     padding: 1rem 5%;
   }
+
+  @media screen and (min-width: 1440px) {
+    padding: 1rem 20%;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding: 1rem 25%;
+  }
 }
