@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { AnimatedHero } from "@/components/AnimatedHero";
+import styles from "@/styles/Home.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,10 +16,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section>
-        <AnimatedHero />
+        <section className={styles.hero}>
+          <hr />
+          <AnimatedHero />
+          <hr />
+        </section>
+        <section className={styles.about}>
+          <p>
+            I am a <span className={styles.emphasize}>software engineer</span>,
+            enthusiastic and passionate about web development technologies.
+          </p>
+        </section>
       </section>
-
-      <div className="image"></div>
     </>
   );
 }

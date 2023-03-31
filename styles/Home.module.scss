@@ -1,0 +1,25 @@
+@import "./variables.module.scss";
+
+.hero {
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  > hr {
+    background-color: $sage8;
+    border: 1px solid $sage8;
+  }
+}
+
+.about {
+  display: flex;
+  font-size: 3vw;
+  text-align: center;
+}
+
+.emphasize {
+  background: linear-gradient(45deg, blue, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
