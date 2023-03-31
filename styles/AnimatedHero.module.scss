@@ -1,0 +1,84 @@
+@import "./variables.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap");
+
+.title {
+  color: $sage11;
+  font-size: 2.5vw;
+  font-family: JetBrains Mono, sans-serif;
+
+  & * {
+    font-family: JetBrains Mono, sans-serif;
+  }
+}
+
+.primary {
+  color: $green12;
+}
+
+.accent {
+  color: $mint11;
+}
+
+.detail {
+  color: $sage12;
+}
+
+.dark {
+  color: $sage12;
+  opacity: 30%;
+}
+
+.property {
+  font-style: italic;
+}
+
+.consoleLog {
+  display: flex;
+  overflow: hidden;
+  max-height: 5vw;
+  align-items: center;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  animation: move 6s 1.5s infinite;
+}
+
+.greeting {
+  position: relative;
+  font-size: 2.5vw;
+  top: 9.5vw;
+  animation: white-out 10s infinite;
+  font-family: JetBrains Mono, sans-serif;
+}
+
+.en {
+  color: $sage12;
+}
+
+.es {
+  color: $mint11;
+}
+
+.de {
+  color: $green12;
+}
+
+.tr {
+  color: $green11;
+}
+
+@keyframes move {
+  25% {
+    transform: translatey(-6.25vw);
+    opacity: 1;
+  }
+  50% {
+    transform: translatey(-12.5vw);
+  }
+  75% {
+    transform: translatey(-18.75vw);
+  }
+}

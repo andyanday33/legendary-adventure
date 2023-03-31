@@ -5,4 +5,10 @@
   color: $green11;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  padding: 1rem 10%;
+
+  @media screen and (max-width: 800px) {
+    padding: 1rem 5%;
+  }
 }
