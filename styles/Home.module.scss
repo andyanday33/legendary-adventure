@@ -1,7 +1,7 @@
 @import "./variables.module.scss";
 
 .hero {
-  padding: 8rem 0;
+  padding: 6rem 0;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -22,6 +22,53 @@
 
   @media screen and (min-width: 1920px) {
     font-size: 1.5vw;
+  }
+}
+
+.technologies {
+  font-size: 2.5vw;
+  color: $sage12;
+  font-weight: 700;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+  text-align: center;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 2vw;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 1.5vw;
+  }
+
+  & .techChipGroup {
+    padding-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: large;
+    gap: 2.5rem;
+
+    & .techChip {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+}
+
+.icon {
+  color: $sage11;
+  transition: color 0.25s;
+  font-size: 2.5rem;
+  &:hover {
+    color: $green11;
+  }
+
+  @media screen and (min-width: 900px) {
+    font-size: 3.5rem;
   }
 }
 
