@@ -35,7 +35,7 @@
 .consoleLog {
   display: flex;
   overflow: hidden;
-  max-height: 5vw;
+  max-height: 35px;
   align-items: center;
 }
 
@@ -48,10 +48,18 @@
 
 .greeting {
   position: relative;
-  font-size: 2.5vw;
-  top: 9.5vw;
+  font-size: 4vw;
+  top: 12.2vw;
   animation: white-out 10s infinite;
   font-family: JetBrains Mono, sans-serif;
+}
+
+.bigScreenOnly {
+  display: none;
+}
+
+.smallScreenOnly {
+  display: flex;
 }
 
 .en {
@@ -72,14 +80,50 @@
 
 @keyframes move {
   25% {
-    transform: translatey(-6.25vw);
+    transform: translatey(-8.33vw);
     opacity: 1;
   }
   50% {
-    transform: translatey(-12.5vw);
+    transform: translatey(-16.66vw);
   }
   75% {
-    transform: translatey(-18.75vw);
+    transform: translatey(-24.99vw);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .title {
+    font-size: 2vw;
+  }
+
+  .bigScreenOnly {
+    display: block;
+  }
+
+  .smallScreenOnly {
+    display: none;
+  }
+
+  .greeting {
+    font-size: 2.5vw;
+    top: 9.5vw;
+  }
+
+  .consoleLog {
+    justify-content: start;
+  }
+
+  @keyframes move {
+    25% {
+      transform: translatey(-6.25vw);
+      opacity: 1;
+    }
+    50% {
+      transform: translatey(-12.5vw);
+    }
+    75% {
+      transform: translatey(-18.75vw);
+    }
   }
 }
 

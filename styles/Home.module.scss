@@ -1,10 +1,10 @@
 @import "./variables.module.scss";
 
 .hero {
-  padding: 6rem 0;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.25rem;
 
   > hr {
     background-color: $sage8;
@@ -14,8 +14,14 @@
 
 .about {
   display: flex;
-  font-size: 3vw;
+  font-size: large;
+  justify-content: center;
   text-align: center;
+
+  @media screen and (min-width: 700px) {
+    font-size: x-large;
+  }
+
   @media screen and (min-width: 1440px) {
     font-size: 2vw;
   }
@@ -26,7 +32,7 @@
 }
 
 .technologies {
-  font-size: 2.5vw;
+  font-size: large;
   color: $sage12;
   font-weight: 700;
   display: flex;
@@ -34,6 +40,10 @@
   flex-direction: column;
   padding-top: 3rem;
   text-align: center;
+
+  @media screen and (min-width: 700px) {
+    font-size: x-large;
+  }
 
   @media screen and (min-width: 1440px) {
     font-size: 2vw;
