@@ -4,8 +4,11 @@ import matter from "gray-matter";
 
 const dataDirectory = path.join(process.cwd(), "data/projects");
 
-export interface ProjectData {
+interface ParsedData {
   content: string;
+  data: ProjectData;
+}
+export interface ProjectData {
   title?: string;
   startDate?: string;
   endDate?: string;
@@ -17,16 +20,14 @@ export function getSortedData() {
     const id = fileName.replace(/\.md$/, "");
     const fullPath = path.join(dataDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { content, title, startDate, endDate } = matter(
-      fileContents
-    ) as ProjectData;
-    console.log(content);
+    const { content, data } = matter(fileContents) as ParsedData;
+
     return {
       id,
       content,
-      title: title ?? "",
-      startDate: startDate ?? "",
-      endDate: endDate ?? "",
+      title: data.title ?? "",
+      startDate: data.startDate ?? "",
+      endDate: data.endDate ?? "",
     };
   });
 
