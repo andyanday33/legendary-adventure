@@ -14,14 +14,10 @@
 
 .about {
   display: flex;
-  font-size: large;
+  font-size: x-large;
   justify-content: center;
   text-align: center;
-
-  @media screen and (min-width: 700px) {
-    font-size: x-large;
-  }
-
+  margin: 3rem 0;
   @media screen and (min-width: 1440px) {
     font-size: 2vw;
   }
@@ -32,7 +28,7 @@
 }
 
 .technologies {
-  font-size: large;
+  font-size: x-large;
   color: $sage12;
   font-weight: 700;
   display: flex;
@@ -40,10 +36,6 @@
   flex-direction: column;
   padding-top: 3rem;
   text-align: center;
-
-  @media screen and (min-width: 700px) {
-    font-size: x-large;
-  }
 
   @media screen and (min-width: 1440px) {
     font-size: 2vw;
@@ -54,11 +46,11 @@
   }
 
   & .techChipGroup {
-    padding-top: 4rem;
+    padding-top: 2.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: large;
+    font-size: medium;
     gap: 2.5rem;
 
     & .techChip {
@@ -72,13 +64,17 @@
 .icon {
   color: $sage11;
   transition: color 0.25s;
-  font-size: 2.5rem;
+  font-size: 2rem;
   &:hover {
     color: $green11;
   }
 
   @media screen and (min-width: 900px) {
     font-size: 3.5rem;
+  }
+
+  @media screen and (min-width: 600px) {
+    font-size: 2.5rem;
   }
 }
 
