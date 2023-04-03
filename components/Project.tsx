@@ -2,7 +2,7 @@ import { ProjectData } from "@/utils/parseProjectsMd";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import styles from "@/styles/Project.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 type Props = {
@@ -12,25 +12,27 @@ type Props = {
 };
 
 export const Project: React.FC<Props> = ({ meta, content, order }) => {
-  console.log(meta.tags);
   return (
-    <AnimatePresence>
-      <motion.div
-        className={styles.project}
-        initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 100 }}
-        transition={{ delay: order * 0.025 }}
-      >
-        <ReactMarkdown>{content}</ReactMarkdown>
-        <hr />
-        <section className={styles.tags}>
-          {meta.tags?.map((tag) => (
-            <Link key={tag} href={`/tags/${tag}`}>
-              #{tag}
-            </Link>
-          ))}
-        </section>
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      className={styles.project}
+      initial={{ x: -100 }}
+      animate={{ x: 0 }}
+      transition={{
+        delay: order * 0.025,
+        type: "spring",
+        damping: 10,
+        stiffness: 100,
+      }}
+    >
+      <ReactMarkdown>{content}</ReactMarkdown>
+      <hr />
+      <section className={styles.tags}>
+        {meta.tags?.map((tag) => (
+          <Link key={tag} href={`/tags/${tag}`}>
+            #{tag}
+          </Link>
+        ))}
+      </section>
+    </motion.div>
   );
 };

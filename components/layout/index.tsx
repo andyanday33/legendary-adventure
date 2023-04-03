@@ -18,6 +18,7 @@ export const Layout: React.FC<Props> = ({ children }) => {
       <main className={styles.main}>
         <AnimatePresence mode="wait" initial={false}>
           <motion.section
+            className={styles.content}
             key={currentRoute}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -7,6 +7,10 @@
   display: flex;
   padding: 1rem 10%;
 
+  & .content {
+    width: 100%;
+  }
+
   @media screen and (max-width: 800px) {
     padding: 1rem 5%;
   }
