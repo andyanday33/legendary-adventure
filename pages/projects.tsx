@@ -1,9 +1,8 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { MDXProvider } from "@mdx-js/react";
 import { ProjectData, getSortedData } from "@/utils/parseProjectsMd";
 import { Project } from "@/components/Project";
 import { GetStaticProps } from "next";
+import styles from "@/styles/Projects.module.scss";
 
 interface ProjectProps {
   data: ({ id: string; content: string } & ProjectData)[];
@@ -11,12 +10,14 @@ interface ProjectProps {
 
 const Projects: React.FC<ProjectProps> = ({ data }) => {
   return (
-    <div>
-      {data.map((project) => (
+    <div className={styles.projects}>
+      <h1>Projects</h1>
+      {data.map((project, _) => (
         <Project
           key={project.id}
-          meta={{ title: project.title }}
+          meta={{ title: project.title, tags: project.tags }}
           content={project.content}
+          order={_}
         />
       ))}
     </div>

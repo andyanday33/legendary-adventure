@@ -1,0 +1,26 @@
+@import "./variables.module.scss";
+
+.project {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid $green7;
+  border-radius: 0.5rem;
+  width: 500px;
+  color: $sage11;
+  transition: all 0.25s;
+
+  > h1,
+  h2,
+  h3,
+  h4 {
+    color: $green11;
+  }
+
+  &:hover {
+    border-color: $green8;
+    background-color: $green4;
+    border-radius: 0.25rem;
+  }
+}

@@ -12,6 +12,7 @@ export interface ProjectData {
   title?: string;
   startDate?: string;
   endDate?: string;
+  tags?: string[];
 }
 
 export function getSortedData() {
@@ -28,6 +29,7 @@ export function getSortedData() {
       title: data.title ?? "",
       startDate: data.startDate ?? "",
       endDate: data.endDate ?? "",
+      tags: data.tags ?? [],
     };
   });
 
