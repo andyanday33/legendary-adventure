@@ -48,73 +48,73 @@ export default function Home() {
           <p>I like to work and have experience with</p>
           <section className={styles.techChipGroup}>
             <div className={styles.techChip}>
-              <Link href="/tags/typescript">
+              <Link href="/projects?tag==typescript">
                 <SiTypescript className={styles.icon} />
               </Link>
               <span>Typescript</span>
             </div>
             <div className={styles.techChip}>
-              <Link href="/tags/javascript">
+              <Link href="/projects?tag=javascript">
                 <SiJavascript className={styles.icon} />
               </Link>
               <span>Javascript</span>
             </div>
             <div className={styles.techChip}>
-              <Link href="/tags/react">
+              <Link href="/projects?tag=react">
                 <SiReact className={styles.icon} />
               </Link>
               <span>React</span>
             </div>
             <div className={styles.techChip}>
-              <Link href="/tags/nextjs">
+              <Link href="/projects?tag=nextjs">
                 <SiNextdotjs className={styles.icon} />
               </Link>
               <span>Next.js</span>
             </div>
             <div className={styles.techChip}>
-              <Link href="/tags/angular">
+              <Link href="/projects?tag=angular">
                 <SiAngular className={styles.icon} />
               </Link>
               <span>Angular</span>
             </div>
             <div className={styles.techChip}>
-              <Link href="/tags/nodejs">
+              <Link href="/projects?tag=nodejs">
                 <FaNodeJs className={styles.icon} />
               </Link>
               <span>Node.js</span>
             </div>
             <div className={styles.techChip}>
-              <Link href="/tags/csharp">
+              <Link href="/projects?tag=csharp">
                 <SiCsharp className={styles.icon} />
               </Link>
               <span>C#</span>
             </div>
             <div className={styles.techChip}>
-              <Link href="/tags/dotnet">
+              <Link href="/projects?tag=dotnet">
                 <SiDotnet className={styles.icon} />
               </Link>
               <span>DotNet</span>
             </div>
             <div className={styles.techChip}>
-              <Link href="/tags/azure">
+              <Link href="/projects?tag=azure">
                 <SiMicrosoftazure className={styles.icon} />
               </Link>
               <span>Azure</span>
             </div>
             <div className={styles.techChip}>
-              <Link href="/tags/sass">
+              <Link href="/projects?tag=sass">
                 <DiSass className={styles.icon} />
               </Link>
               <span>Sass</span>
             </div>
             <div className={styles.techChip}>
-              <Link href="/tags/redux">
+              <Link href="/projects?tag=redux">
                 <SiRedux className={styles.icon} />
               </Link>
               <span>Redux</span>
             </div>
             <div className={styles.techChip}>
-              <Link href="/tags/graphql">
+              <Link href="/projects?tag=graphql">
                 <SiGraphql className={styles.icon} />
               </Link>
               <span>GraphQL</span>
