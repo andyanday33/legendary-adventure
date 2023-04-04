@@ -1,7 +1,5 @@
 ---
-title: "bruh"
+title: "Test 2"
 ---
-
-## Test 2
 
 asfsdfsd

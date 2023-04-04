@@ -1,9 +1,7 @@
 ---
-title: "bruh"
+title: "Test 3"
 tags: ["react", "html", "css"]
 ---
-
-## Test 3
 
 asfsdfsdasfsdf
 sdfsdfsd

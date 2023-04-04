@@ -38,6 +38,8 @@ const Projects: React.FC<ProjectProps> = ({ data }) => {
               <Project
                 meta={{ title: project.title, tags: project.tags }}
                 content={project.content}
+                title={project.title!}
+                link={project.link}
               />
             </motion.li>
           ))}
