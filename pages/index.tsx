@@ -16,6 +16,8 @@ import {
   SiReact,
   SiRedux,
   SiTypescript,
+  SiRemix,
+  SiAmazonaws,
 } from "react-icons/si";
 
 import { DiSass } from "react-icons/di";
@@ -48,7 +50,7 @@ export default function Home() {
           <p>I like to work and have experience with</p>
           <section className={styles.techChipGroup}>
             <div className={styles.techChip}>
-              <Link href="/projects?tag==typescript">
+              <Link href="/projects?tag=typescript">
                 <SiTypescript className={styles.icon} />
               </Link>
               <span>Typescript</span>
@@ -70,6 +72,12 @@ export default function Home() {
                 <SiNextdotjs className={styles.icon} />
               </Link>
               <span>Next.js</span>
+            </div>
+            <div className={styles.techChip}>
+              <Link href="/projects?tag=remix">
+                <SiRemix className={styles.icon} />
+              </Link>
+              <span>Remix</span>
             </div>
             <div className={styles.techChip}>
               <Link href="/projects?tag=angular">
@@ -100,6 +108,12 @@ export default function Home() {
                 <SiMicrosoftazure className={styles.icon} />
               </Link>
               <span>Azure</span>
+            </div>
+            <div className={styles.techChip}>
+              <Link href="/projects?tag=aws">
+                <SiAmazonaws className={styles.icon} />
+              </Link>
+              <span>AWS</span>
             </div>
             <div className={styles.techChip}>
               <Link href="/projects?tag=sass">

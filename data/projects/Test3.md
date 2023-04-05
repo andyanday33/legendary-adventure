@@ -1,6 +1,7 @@
 ---
-title: "Test 3"
-tags: ["react", "html", "css"]
+title: "Esporland - Esports news website"
+link: "https://esporland-remix-andyanday33.vercel.app/"
+tags: ["remix", "react", "typescript", "javascript", "sass", "graphql"]
 ---
 
 asfsdfsdasfsdf

@@ -17,6 +17,11 @@
     color: $green11;
   }
 
+  & img {
+    object-fit: cover;
+    max-width: 100%;
+  }
+
   & .projectLink {
     all: unset;
     cursor: pointer;
