@@ -22,6 +22,7 @@ import {
 
 import { DiSass } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
+import { GetStaticProps } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -139,3 +140,11 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      data: "data",
+    },
+  };
+};

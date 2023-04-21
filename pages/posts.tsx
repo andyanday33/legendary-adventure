@@ -5,7 +5,7 @@ type Props = {};
 
 export default function Posts(props: Props) {
   return (
-    <div className={styles.posts}>
+    <div style={{ backgroundColor: "white" }}>
       <h2>Posts</h2>
       <p>Coming soon...</p>
     </div>
