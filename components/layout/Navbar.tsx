@@ -16,7 +16,6 @@ export const Navbar: React.FC<Props> = ({ className }) => {
     home: "/",
     projects: "/projects",
     posts: "/posts",
-    resume: "/x",
   };
 
   return (
@@ -39,7 +38,13 @@ export const Navbar: React.FC<Props> = ({ className }) => {
       >
         Posts
       </Link>
-      <Link href="/x">Resume</Link>
+      <a
+        href="/Resume_april_2023.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Resume
+      </a>
       <section className={styles.socials}>
         <a href="https://www.github.com/andyanday33" target="_blank">
           <SiGithub />
