@@ -11,7 +11,6 @@ export const Layout: React.FC<Props> = ({ children }) => {
     <>
       <Navbar className={styles.navbar} />
       <main className={styles.main}>{children}</main>
-      <footer>Footer</footer>
     </>
   );
 };
