@@ -2,6 +2,7 @@
 title: "Esporland - Esports news website"
 link: "https://esporland-remix-andyanday33.vercel.app/"
 tags: ["remix", "react", "typescript", "javascript", "sass", "graphql"]
+startDate: "01/12/2022"
 ---
 
 [Work In Progress]

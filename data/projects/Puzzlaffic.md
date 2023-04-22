@@ -2,6 +2,8 @@
 title: "Puzzlaffic"
 link: "https://mscthesis-andyanday33.vercel.app/"
 tags: ["react", "redux", "typescript", "javascript"]
+startDate: "01/06/2022"
+endDate: "01/09/2022"
 ---
 
 A solo project that is meant to be played by children in the University of St Andrews’ outreach events. Includes a simple web-based accessible interface, drag-and-drop code generation blocks and simple puzzles that are meant to be solved approximately in an hour.

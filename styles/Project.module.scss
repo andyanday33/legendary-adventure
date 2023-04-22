@@ -31,6 +31,9 @@
   }
 
   & .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     & a {
       all: unset;
       cursor: pointer;
@@ -39,7 +42,5 @@
         text-decoration: underline;
       }
     }
-    display: flex;
-    gap: 0.5rem;
   }
 }
