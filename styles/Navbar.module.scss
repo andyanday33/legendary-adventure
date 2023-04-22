@@ -30,3 +30,28 @@
     }
   }
 }
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  > a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    color: $green11;
+    gap: 0.25rem;
+    &:hover {
+      color: $green10;
+      > svg {
+        color: $green10;
+      }
+    }
+
+    > svg {
+      font-size: 2rem;
+      color: $green11;
+    }
+  }
+}
