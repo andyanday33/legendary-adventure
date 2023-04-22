@@ -2,7 +2,6 @@ import { ProjectData } from "@/utils/parseProjectsMd";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import styles from "@/styles/Project.module.scss";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 type Props = {
