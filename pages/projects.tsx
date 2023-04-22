@@ -6,6 +6,7 @@ import styles from "@/styles/Projects.module.scss";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import Head from "next/head";
 
 interface ProjectProps {
   data: ({ id: string; content: string } & ProjectData)[];
@@ -23,45 +24,53 @@ const Projects: React.FC<ProjectProps> = ({ data }) => {
   }, [tag, data]);
 
   return (
-    <div className={styles.projects}>
-      <div className={styles.header}>
-        <h1>
-          /Projects
-          {tag &&
-            typeof tag === "string" &&
-            `/${tag.slice(0, 1).toUpperCase() + tag.slice(1)}`}
-        </h1>
-        {tag && <Link href="/projects">Clear Filter</Link>}
-      </div>
+    <>
+      <Head>
+        <title>Berke&apos;s Projects</title>
+        <meta name="description" content="Berke Anday Baloğlu's projects" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className={styles.projects}>
+        <div className={styles.header}>
+          <h1>
+            /Projects
+            {tag &&
+              typeof tag === "string" &&
+              `/${tag.slice(0, 1).toUpperCase() + tag.slice(1)}`}
+          </h1>
+          {tag && <Link href="/projects">Clear Filter</Link>}
+        </div>
 
-      <ul className={styles.projectList}>
-        <AnimatePresence mode="popLayout">
-          {filteredData.length > 0 ? (
-            filteredData.map((project) => (
-              <motion.li
-                layout
-                key={project.id}
-                className={styles.projectLi}
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-              >
-                <Project
-                  meta={{ title: project.title, tags: project.tags }}
-                  content={project.content}
-                  title={project.title!}
-                  link={project.link}
-                />
-              </motion.li>
-            ))
-          ) : (
-            <p className={styles.notFound}>
-              Looks like there are no projects I am allowed to talk about...
-            </p>
-          )}
-        </AnimatePresence>
-      </ul>
-    </div>
+        <ul className={styles.projectList}>
+          <AnimatePresence mode="popLayout">
+            {filteredData.length > 0 ? (
+              filteredData.map((project) => (
+                <motion.li
+                  layout
+                  key={project.id}
+                  className={styles.projectLi}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.8, opacity: 0 }}
+                >
+                  <Project
+                    meta={{ title: project.title, tags: project.tags }}
+                    content={project.content}
+                    title={project.title!}
+                    link={project.link}
+                  />
+                </motion.li>
+              ))
+            ) : (
+              <p className={styles.notFound}>
+                Looks like there are no projects I am allowed to talk about...
+              </p>
+            )}
+          </AnimatePresence>
+        </ul>
+      </div>
+    </>
   );
 };
 
