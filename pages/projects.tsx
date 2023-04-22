@@ -22,26 +22,37 @@ const Projects: React.FC<ProjectProps> = ({ data }) => {
 
   return (
     <div className={styles.projects}>
-      <h1>Projects</h1>
+      <h1>
+        /Projects
+        {tag &&
+          typeof tag === "string" &&
+          `/${tag.slice(0, 1).toUpperCase() + tag.slice(1)}`}
+      </h1>
       <ul className={styles.projectList}>
         <AnimatePresence mode="popLayout">
-          {filteredData.map((project) => (
-            <motion.li
-              layout
-              key={project.id}
-              className={styles.projectLi}
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-            >
-              <Project
-                meta={{ title: project.title, tags: project.tags }}
-                content={project.content}
-                title={project.title!}
-                link={project.link}
-              />
-            </motion.li>
-          ))}
+          {filteredData.length > 0 ? (
+            filteredData.map((project) => (
+              <motion.li
+                layout
+                key={project.id}
+                className={styles.projectLi}
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+              >
+                <Project
+                  meta={{ title: project.title, tags: project.tags }}
+                  content={project.content}
+                  title={project.title!}
+                  link={project.link}
+                />
+              </motion.li>
+            ))
+          ) : (
+            <p className={styles.notFound}>
+              Looks like there are no projects I am allowed to talk about...
+            </p>
+          )}
         </AnimatePresence>
       </ul>
     </div>
