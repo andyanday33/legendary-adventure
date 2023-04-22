@@ -9,22 +9,22 @@
   > a {
     font-size: x-large;
     text-decoration: none;
-    color: $sage11;
+    color: $sage12;
     cursor: pointer;
-    background-color: $green3;
-    border: 1px solid $green7;
+    background-color: $green5;
+
     padding: 1rem;
     display: inline-block;
     border-radius: 0.5rem;
     transition: border-radius 0.25s;
     &:hover {
-      background-color: $green4;
+      background-color: $green6;
       border-color: $green8;
       border-radius: 0.25rem;
       transition: border-radius 0.25s;
     }
     &.active {
-      background-color: $green5;
+      background-color: $green6;
       border-color: $green8;
       border-radius: 0.25rem;
     }

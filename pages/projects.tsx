@@ -5,6 +5,7 @@ import { GetStaticProps } from "next";
 import styles from "@/styles/Projects.module.scss";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 interface ProjectProps {
   data: ({ id: string; content: string } & ProjectData)[];
@@ -16,18 +17,23 @@ const Projects: React.FC<ProjectProps> = ({ data }) => {
   const [filteredData, setFilteredData] = useState(data);
 
   useEffect(() => {
+    if (!tag) setFilteredData(data);
     if (typeof tag === "string")
       setFilteredData(data.filter((d) => (tag ? d.tags?.includes(tag) : d)));
   }, [tag, data]);
 
   return (
     <div className={styles.projects}>
-      <h1>
-        /Projects
-        {tag &&
-          typeof tag === "string" &&
-          `/${tag.slice(0, 1).toUpperCase() + tag.slice(1)}`}
-      </h1>
+      <div className={styles.header}>
+        <h1>
+          /Projects
+          {tag &&
+            typeof tag === "string" &&
+            `/${tag.slice(0, 1).toUpperCase() + tag.slice(1)}`}
+        </h1>
+        {tag && <Link href="/projects">Clear Filter</Link>}
+      </div>
+
       <ul className={styles.projectList}>
         <AnimatePresence mode="popLayout">
           {filteredData.length > 0 ? (
