@@ -1,15 +1,9 @@
 import React from "react";
-import styles from "@/styles/AnimatedHero.module.scss";
+import styles from "@/styles/Hero.module.scss";
 
 type Props = {};
 
-const rubber = {
-  duck: console.log,
-};
-
-rubber.duck("welcome to berke's space");
-
-export const AnimatedHero = (props: Props) => {
+export const Hero = (props: Props) => {
   return (
     <>
       <h1 className={styles.title}>
@@ -43,15 +37,6 @@ export const AnimatedHero = (props: Props) => {
         <div className={styles.textContent}>
           <span className={styles.greeting + " " + styles.en}>
             Welcome to Berke&apos;s Domain
-          </span>
-          <span className={styles.greeting + " " + styles.tr}>
-            Berke&apos;nin Sitesine Hoşgeldiniz
-          </span>
-          <span className={styles.greeting + " " + styles.de}>
-            Willkommen auf der Domain von berke
-          </span>
-          <span className={styles.greeting + " " + styles.es}>
-            Bienvenido al dominio de berke
           </span>
         </div>
         <h1

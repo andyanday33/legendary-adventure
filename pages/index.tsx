@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import { AnimatedHero } from "@/components/AnimatedHero";
+import { Hero } from "@/components/Hero";
 import styles from "@/styles/Home.module.scss";
 import Link from "next/link";
 
@@ -40,7 +40,7 @@ export default function Home() {
       <section>
         <section className={styles.hero}>
           <hr />
-          <AnimatedHero />
+          <Hero />
           <hr />
         </section>
         <section className={styles.about}>

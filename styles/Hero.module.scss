@@ -1,0 +1,116 @@
+@import "./variables.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap");
+
+.title {
+  color: $sage11;
+  font-size: 0.8rem;
+  font-family: JetBrains Mono, sans-serif;
+  font-weight: 500;
+  & * {
+    font-family: JetBrains Mono, sans-serif;
+  }
+}
+
+.primary {
+  color: $green12;
+}
+
+.accent {
+  color: $mint11;
+}
+
+.detail {
+  color: $sage12;
+}
+
+.dark {
+  color: $sage12;
+  opacity: 30%;
+}
+
+.property {
+  font-style: italic;
+}
+
+.consoleLog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3vw;
+}
+
+.greeting {
+  position: relative;
+  font-size: 1.5rem;
+  font-family: JetBrains Mono, sans-serif;
+  font-weight: 900;
+}
+
+.bigScreenOnly {
+  display: none;
+}
+
+.smallScreenOnly {
+  display: flex;
+}
+
+.en {
+  color: $sage12;
+}
+
+@media screen and (min-width: 550px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .greeting {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .greeting {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .title {
+    font-size: 3.25vw;
+  }
+  .greeting {
+    font-size: 3.25vw;
+  }
+
+  .bigScreenOnly {
+    display: block;
+  }
+
+  .smallScreenOnly {
+    display: none;
+  }
+
+  .consoleLog {
+    justify-content: start;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 2vw;
+  }
+
+  .greeting {
+    font-size: 2vw;
+  }
+}
