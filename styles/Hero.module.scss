@@ -86,10 +86,10 @@
 
 @media screen and (min-width: 800px) {
   .title {
-    font-size: 3.25vw;
+    font-size: 3.2vw;
   }
   .greeting {
-    font-size: 3.25vw;
+    font-size: 3.2vw;
   }
 
   .bigScreenOnly {
@@ -106,6 +106,16 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .title {
+    font-size: 2.425vw;
+  }
+
+  .greeting {
+    font-size: 2.425vw;
+  }
+}
+
+@media screen and (min-width: 1920px) {
   .title {
     font-size: 2vw;
   }
