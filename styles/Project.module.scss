@@ -24,6 +24,7 @@
 
   & .projectLink {
     all: unset;
+    text-decoration: underline;
     cursor: pointer;
     &:hover {
       text-decoration: underline;
