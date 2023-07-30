@@ -2,7 +2,7 @@
 title: "Esporland - Esports news website"
 link: "https://esporland-remix-andyanday33.vercel.app/"
 tags: ["nextjs", "react", "typescript", "javascript", "php", "wordpress"]
-startDate: "01/12/2022"
+startDate: "01/04/2023"
 ---
 
 [Work In Progress]
