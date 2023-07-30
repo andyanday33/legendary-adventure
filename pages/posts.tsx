@@ -1,10 +1,15 @@
 import React from "react";
 import styles from "@/styles/Posts.module.scss";
 import Head from "next/head";
+import { PostData, getSortedData } from "@/utils/parsePostsMd";
+import { GetStaticProps } from "next";
+import { Post } from "@/components/Post";
 
-type Props = {};
+interface PostProps {
+  data: ({ id: string; content: string } & PostData)[];
+}
 
-export default function Posts(props: Props) {
+export default function Posts({ data }: PostProps) {
   return (
     <>
       <Head>
@@ -15,8 +20,27 @@ export default function Posts(props: Props) {
       </Head>
       <div className={styles.posts}>
         <h1>/Posts</h1>
-        <p>Coming soon...</p>
+        <ul>
+          {data.map((post) => (
+            <Post
+              key={post.id}
+              meta={{ title: post.title }}
+              content={post.content}
+              title={post.title!}
+              link={post.link}
+            />
+          ))}
+        </ul>
       </div>
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const data = getSortedData();
+  return {
+    props: {
+      data,
+    },
+  };
+};
