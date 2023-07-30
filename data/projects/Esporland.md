@@ -1,6 +1,6 @@
 ---
 title: "Esporland - Esports news website"
-link: "https://esporland-remix-andyanday33.vercel.app/"
+link: "https://esporland-next-andyanday33.vercel.app/"
 tags: ["nextjs", "react", "typescript", "javascript", "php", "wordpress"]
 startDate: "01/04/2023"
 ---
@@ -15,6 +15,6 @@ Development effort is ongoing using Next.js and Wordpress as headless CMS.
 
 Led a small team of mid-level and junior engineers, reviewed pull requests, labelled issues and involved in conversations regarding feature requests, bugs, etc.
 
-Screenshots:
+Screenshots (WIP, not final design):
 
 ![Esporland Main Page](https://berankedayportfoliobucket.s3.eu-west-2.amazonaws.com/Esporland.png)
