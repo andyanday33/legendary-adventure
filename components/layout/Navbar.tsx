@@ -38,7 +38,7 @@ export const Navbar: React.FC<Props> = ({ className }) => {
       >
         Posts
       </Link>
-      <a href="/Resume_may_2023.pdf" target="_blank" rel="noopener noreferrer">
+      <a href="/Resume_july_2023.pdf" target="_blank" rel="noopener noreferrer">
         Resume
       </a>
       <section className={styles.socials}>
